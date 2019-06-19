@@ -5,7 +5,7 @@
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <legacyMode>false</legacyMode>
       <alwaysOn>true</alwaysOn>
-      <updateRate>5</updateRate>
+      <updateRate>10</updateRate>
       <leftJoint>left_wheel_hinge</leftJoint>
       <rightJoint>right_wheel_hinge</rightJoint>
       <wheelSeparation>0.4</wheelSeparation>
@@ -23,11 +23,10 @@
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
       <publishOdomTF>true</publishOdomTF>
-      <broadcastTf>true</broadcastTf>
     </plugin>
   </gazebo>
 
-<!-- RGBD Camera -->
+  <!-- RGBD Camera -->
   <gazebo reference="camera">
     <sensor type="depth" name="camera1">
         <always_on>1</always_on>
@@ -78,7 +77,7 @@
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
-      <update_rate>20.0</update_rate>
+      <update_rate>40</update_rate>
       <ray>
         <scan>
           <horizontal>
